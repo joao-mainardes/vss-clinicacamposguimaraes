@@ -3,7 +3,6 @@
   const doc = document.documentElement;
   doc.classList.add('js');
   const calmo = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const fino = matchMedia('(pointer: fine)').matches;
   const waLink = (txt) => 'https://wa.me/' + SITE.wa + '?text=' + encodeURIComponent(txt);
   const $ = (s, c) => (c || document).querySelector(s);
   const $$ = (s, c) => [...(c || document).querySelectorAll(s)];
@@ -12,12 +11,7 @@
 
   // entrada do hero
   const hero = $('.hero');
-  requestAnimationFrame(() => setTimeout(() => hero.classList.add('pronto'), 80));
-
-  // header
-  const header = $('.topo');
-  const flut = $('.wa-flut');
-  const agenda = $('#agenda');
+  requestAnimationFrame(() => setTimeout(() => hero.classList.add('pronto'), 60));
 
   // menu mobile
   const hamb = $('.hamb'), menu = $('#menu');
@@ -33,22 +27,14 @@
   // reveal
   const io = new IntersectionObserver((ents) => ents.forEach((en) => {
     if (en.isIntersecting) { en.target.classList.add('on'); io.unobserve(en.target); }
-  }), { threshold: .14, rootMargin: '0px 0px -6% 0px' });
+  }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
   $$('.rev').forEach((el) => {
     const irmaos = [...el.parentElement.children].filter((c) => c.classList.contains('rev'));
-    el.style.transitionDelay = Math.min(irmaos.indexOf(el), 5) * 70 + 'ms';
+    el.style.transitionDelay = Math.min(irmaos.indexOf(el), 5) * 80 + 'ms';
     io.observe(el);
   });
 
-  // acordeão de cuidados
-  $$('.item button').forEach((b) => b.addEventListener('click', () => {
-    const li = b.parentElement, abre = !li.classList.contains('aberto');
-    $$('.item.aberto').forEach((o) => { o.classList.remove('aberto'); $('button', o).setAttribute('aria-expanded', 'false'); });
-    li.classList.toggle('aberto', abre); b.setAttribute('aria-expanded', String(abre));
-  }));
-  const primeiro = $('.item button'); if (primeiro) primeiro.click();
-
-  // relógio: marcas + arco + contador
+  // relógio: marcas
   const rel = $('.relogio'), g = $('.relogio__marcas', rel), ns = 'http://www.w3.org/2000/svg';
   for (let i = 0; i < 60; i++) {
     const a = (i / 60) * Math.PI * 2 - Math.PI / 2, gr = i % 5 === 0, r1 = gr ? 168 : 174, r2 = 182;
@@ -58,51 +44,56 @@
     if (gr) l.setAttribute('class', 'g'); g.appendChild(l);
   }
   const arco = $('.relogio__arco', rel), num = $('[data-min]', rel);
-  new IntersectionObserver((ents, obs) => {
-    if (!ents[0].isIntersecting) return; obs.disconnect();
-    if (calmo) { arco.style.strokeDasharray = '45 60'; num.textContent = 45; return; }
-    const t0 = performance.now(), dur = 2200;
-    const passo = (t) => {
-      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 4), v = 45 * e;
-      arco.style.strokeDasharray = v + ' 60'; num.textContent = Math.round(v);
-      if (p < 1) requestAnimationFrame(passo);
-    };
-    requestAnimationFrame(passo);
-  }, { threshold: .4 }).observe(rel);
-
-  // scroll: header, parallax dos médicos, botão flutuante
-  const pv = $('.duo__p--v'), pg = $('.duo__p--g');
-  let agendaVisivel = true, tick = false;
-  new IntersectionObserver((ents) => { agendaVisivel = ents[0].isIntersecting; flut.classList.toggle('some', agendaVisivel); }, { threshold: .1 }).observe(agenda);
-  const noScroll = () => {
-    tick = false;
-    const y = scrollY;
-    header.classList.toggle('sujo', y > 30);
-    if (calmo) return;
-    if (y < innerHeight * 1.2) {
-      pv.style.setProperty('--py', (y * -0.06) + 'px');
-      pg.style.setProperty('--py', (y * -0.12) + 'px');
-    }
+  const fases = $$('.fases li');
+  const pinta = (p) => {
+    const v = 45 * p;
+    arco.style.strokeDasharray = v.toFixed(2) + ' 60';
+    num.textContent = Math.round(v);
+    const k = Math.min(fases.length - 1, Math.floor(p * fases.length * .999));
+    fases.forEach((li, i) => li.classList.toggle('ativa', i === k));
   };
+
+  // cena fixa no desktop: o relógio anda com a rolagem; no celular, anima ao entrar
+  const consulta = $('.consulta'), palco = $('.consulta__palco');
+  const largo = matchMedia('(min-width: 901px)');
+  let cena = false;
+  const montaCena = () => {
+    cena = largo.matches && !calmo;
+    consulta.classList.toggle('consulta--cena', cena);
+    if (!cena) { fases.forEach((li) => li.classList.remove('ativa')); arco.style.strokeDasharray = '45 60'; num.textContent = 45; }
+  };
+  montaCena(); largo.addEventListener('change', () => { montaCena(); noScroll(); });
+  if (!calmo) {
+    new IntersectionObserver((ents, obs) => {
+      if (cena || !ents[0].isIntersecting) return; obs.disconnect();
+      const t0 = performance.now(), dur = 2000;
+      const passo = (t) => {
+        const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 4);
+        arco.style.strokeDasharray = (45 * e).toFixed(2) + ' 60'; num.textContent = Math.round(45 * e);
+        if (p < 1) requestAnimationFrame(passo);
+      };
+      requestAnimationFrame(passo);
+    }, { threshold: .4 }).observe(rel);
+  }
+
+  // rolagem: header, cena, botão flutuante
+  const header = $('.topo'), flut = $('.wa-flut'), agenda = $('#agenda');
+  let tick = false;
+  new IntersectionObserver((ents) => { flut.classList.toggle('some', ents[0].isIntersecting); }, { threshold: .1 }).observe(agenda);
+  const escuras = $$('.consulta, .rodape');
+  function noScroll() {
+    tick = false;
+    header.classList.toggle('sujo', scrollY > 24);
+    const meio = 36;
+    header.classList.toggle('escuro', escuras.some((s) => { const r = s.getBoundingClientRect(); return r.top <= meio && r.bottom >= meio; }));
+    if (cena) {
+      const r = palco.getBoundingClientRect(), total = r.height - innerHeight;
+      const p = Math.min(1, Math.max(0, -r.top / (total * .85)));
+      pinta(p);
+    }
+  }
   addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(noScroll); } }, { passive: true });
   noScroll();
-
-  // brilho que acompanha o cursor no cartão de agenda
-  if (fino && !calmo) {
-    agenda.addEventListener('pointermove', (e) => {
-      const r = agenda.getBoundingClientRect();
-      agenda.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      agenda.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    });
-    // botões magnéticos
-    $$('.btn--p, .btn--wa').forEach((b) => {
-      b.addEventListener('pointermove', (e) => {
-        const r = b.getBoundingClientRect();
-        b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * .12) + 'px,' + ((e.clientY - r.top - r.height / 2) * .2) + 'px)';
-      });
-      b.addEventListener('pointerleave', () => { b.style.transform = ''; });
-    });
-  }
 
   // agenda vira mensagem de WhatsApp
   const erro = $('.agenda__erro', agenda);
