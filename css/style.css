@@ -180,7 +180,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .vozes__f{margin-top:18px;font-size:.8rem;color:#4f6064}
 
 /* local */
-.local{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.local{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:80px;align-items:center}
 .local__foto{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;clip-path:inset(12% 8% 12% 8% round 28px);transition:clip-path 1.4s var(--ease)}
 .local__foto.on{clip-path:inset(0 0 0 0 round 28px)}
 .local__foto img{width:100%;height:118%;object-fit:cover;will-change:transform}
@@ -246,6 +246,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
   .hero__grid{grid-template-columns:1fr;grid-template-areas:"txt" "duo" "agenda";row-gap:26px}
   .duo{min-height:0;max-height:none;aspect-ratio:1/.9;width:min(560px,100%);justify-self:center}
   .cuidado,.consulta,.local{grid-template-columns:1fr;gap:48px}
+  .local__foto{order:2;aspect-ratio:3/2;width:min(520px,100%)}
   .cuidado__cab{position:static}
   .vozes__in{grid-template-columns:1fr}
 }
