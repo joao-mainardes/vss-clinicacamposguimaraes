@@ -70,11 +70,7 @@
     requestAnimationFrame(passo);
   }, { threshold: .4 }).observe(rel);
 
-  // foto do prédio: abre a máscara e faz parallax suave
-  const foto = $('.local__foto'), fotoImg = $('img', foto);
-  new IntersectionObserver((ents, obs) => { if (ents[0].isIntersecting) { foto.classList.add('on'); obs.disconnect(); } }, { threshold: .2 }).observe(foto);
-
-  // scroll: header, parallax dos médicos e do prédio, botão flutuante
+  // scroll: header, parallax dos médicos, botão flutuante
   const pv = $('.duo__p--v'), pg = $('.duo__p--g');
   let agendaVisivel = true, tick = false;
   new IntersectionObserver((ents) => { agendaVisivel = ents[0].isIntersecting; flut.classList.toggle('some', agendaVisivel); }, { threshold: .1 }).observe(agenda);
@@ -86,11 +82,6 @@
     if (y < innerHeight * 1.2) {
       pv.style.setProperty('--py', (y * -0.06) + 'px');
       pg.style.setProperty('--py', (y * -0.12) + 'px');
-    }
-    const r = foto.getBoundingClientRect();
-    if (r.bottom > 0 && r.top < innerHeight) {
-      const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
-      fotoImg.style.transform = 'translateY(' + (-8 + p * 10) + '%)';
     }
   };
   addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(noScroll); } }, { passive: true });
