@@ -3,302 +3,244 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Clínica de Saúde Campos Guimarães · Clínico geral no Batel, Curitiba</title>
-<meta name="description" content="Atenção primária, doenças crônicas, saúde mental, obesidade e longevidade. Consultas de 45 minutos no Batel, em frente ao Shopping Curitiba, ou por teleconsulta.">
+<title>Clínica de Saúde Campos Guimarães · Medicina de família no Batel, Curitiba</title>
+<meta name="description" content="Clínico geral e medicina de família no Batel, em frente ao Shopping Curitiba. Consulta de 45 minutos com retorno incluso, presencial ou por vídeo. Nota 5,0 em 512 avaliações.">
 <meta name="theme-color" content="#0f2e34">
 <meta property="og:title" content="Clínica de Saúde Campos Guimarães">
-<meta property="og:description" content="Consulta de 45 minutos com clínico geral no Batel, Curitiba. Presencial ou online.">
-<meta property="og:image" content="img/logo.jpg">
-<link rel="icon" href="img/logo.jpg">
+<meta property="og:description" content="Seu médico de família, com tempo para ouvir a história inteira. Batel, Curitiba.">
+<meta property="og:image" content="img/medicos-og.jpg">
+<link rel="icon" href="img/marca.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&family=Geist:wght@400;500;600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/vitor.webp">
+<link rel="preload" as="image" href="img/geraldo.webp">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalClinic","name":"Clínica de Saúde Campos Guimarães","telephone":"+55-41-99855-0200","image":"img/logo.jpg",
+{"@context":"https://schema.org","@type":"MedicalClinic","name":"Clínica de Saúde Campos Guimarães","telephone":"+55-41-99855-0200","image":"img/predio.webp",
 "address":{"@type":"PostalAddress","streetAddress":"Rua Desembargador Motta, 1499, 1º andar, sala 106 (Edifício Bristol Brasil 500)","addressLocality":"Curitiba","addressRegion":"PR","postalCode":"80420-164","addressCountry":"BR"},
 "geo":{"@type":"GeoCoordinates","latitude":-25.44112,"longitude":-49.27838},
-"medicalSpecialty":"PrimaryCare","paymentAccepted":"Pix, dinheiro, transferência, cartão de débito e crédito","availableLanguage":["pt","en","es"],
+"medicalSpecialty":"PrimaryCare","availableLanguage":["pt","en","es"],
+"employee":[{"@type":"Physician","name":"Dr. Vitor Duarte Guimarães"},{"@type":"Physician","name":"Dr. Geraldo Campos Nudelmann"}],
 "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"512"}}
 </script>
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="topo" id="topo">
+<header class="topo">
   <div class="w topo__in">
-    <a class="marca" href="#inicio" aria-label="Campos Guimarães, início">
-      <svg class="marca__gota" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="gm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a93cf"/><stop offset="1" stop-color="#4f9a78"/></linearGradient></defs><path fill="url(#gm)" d="M8 4c7-3 20-2 26 5 5 6 2 12-3 16-4 3-5 6-5 10 0 3-4 4-6 1-3-5-2-10-6-14C8 17 1 7 8 4z"/></svg>
-      <span>Campos Guimarães<small>Clínica de Saúde</small></span>
+    <a class="marca" href="#inicio" aria-label="Clínica de Saúde Campos Guimarães, início">
+      <svg class="marca__s" aria-hidden="true"><use href="#marca"/></svg>
+      <span class="marca__t">Campos Guimarães<small>Clínica de Saúde</small></span>
     </a>
     <nav class="menu" id="menu" aria-label="Principal">
-      <a href="#cuidado">Cuidado</a>
-      <a href="#medicos">Médicos</a>
-      <a href="#consulta">Consulta</a>
-      <a href="#local">Como chegar</a>
-      <a class="btn btn--p btn--sm" href="#agendar">Agendar</a>
+      <a href="#cuidado">O que cuidamos</a>
+      <a href="#consulta">A consulta</a>
+      <a href="#local">Onde estamos</a>
+      <a class="btn btn--p btn--sm" href="#agenda">Agendar</a>
     </nav>
-    <button class="hamb" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+    <div class="topo__soc">
+      <a class="soc" href="https://www.instagram.com/camposguimaraes.clinica/" target="_blank" rel="noopener" aria-label="Instagram da clínica"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+      <a class="soc" href="https://wa.me/5541998550200" data-wa="Olá! Vim pelo site da Clínica Campos Guimarães." aria-label="WhatsApp da clínica"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+      <button class="hamb" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <main id="conteudo">
 
-<!-- HERO -->
+<!-- HERO + AGENDA -->
 <section class="hero" id="inicio">
   <div class="w hero__grid">
     <div class="hero__txt">
-      <p class="selo rev"><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 em 512 avaliações na Doctoralia</p>
-      <h1 class="rev">Quarenta e cinco minutos <em>para olhar você inteiro</em>, não só o exame.</h1>
-      <p class="hero__lead rev">Clínica médica de atenção primária no Batel. Um médico que acompanha sua saúde ao longo do tempo: prevenção, doenças crônicas, peso, sono e saúde mental, na mesma conversa.</p>
-      <div class="hero__ctas rev">
-        <a class="btn btn--p" href="https://wa.me/5541998550200" data-wa="Olá! Vim pelo site e gostaria de agendar uma consulta na Clínica Campos Guimarães."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
-        <a class="btn btn--l" href="#local"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Em frente ao Shopping Curitiba</a>
-      </div>
-      <ul class="hero__fatos rev">
-        <li><b>Presencial</b> ou teleconsulta</li>
-        <li><b>1 retorno</b> incluso</li>
-        <li>Atende em <b>português, inglês e espanhol</b></li>
-      </ul>
+      <a class="nota" href="https://www.doctoralia.com.br/clinicas/clinica-de-saude-campos-guimaraes" target="_blank" rel="noopener">
+        <span class="nota__e" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span><b>5,0</b> · 512 avaliações na Doctoralia</span>
+      </a>
+      <h1 class="h1" data-linhas>
+        <span>Seu médico de família,</span>
+        <span><em>com tempo para ouvir</em></span>
+        <span>a história inteira.</span>
+      </h1>
+      <p class="hero__sub">Consulta de 45 minutos, retorno incluso e um cuidado que continua depois que você sai da sala. No Batel, em frente ao Shopping Curitiba, ou por vídeo.</p>
     </div>
 
-    <!-- Assinatura: o relógio de 45 minutos -->
-    <figure class="relogio" aria-label="Duração da consulta: 45 minutos">
-      <svg viewBox="0 0 400 400" class="relogio__svg" aria-hidden="true">
-        <defs><linearGradient id="arco" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a93cf"/><stop offset="1" stop-color="#5aa585"/></linearGradient></defs>
-        <circle cx="200" cy="200" r="170" class="relogio__base"/>
-        <g class="relogio__marcas"></g>
-        <circle cx="200" cy="200" r="150" class="relogio__arco" pathLength="60" transform="rotate(-90 200 200)"/>
-      </svg>
-      <div class="relogio__centro">
-        <span class="relogio__n" data-min>45</span>
-        <span class="relogio__u">minutos de consulta</span>
-      </div>
-      <ol class="relogio__etapas">
-        <li data-e="0">Ouvir a história</li>
-        <li data-e="1">Examinar</li>
-        <li data-e="2">Entender o contexto</li>
-        <li data-e="3">Plano com você</li>
-      </ol>
+    <figure class="duo" aria-label="Dr. Vitor Duarte Guimarães e Dr. Geraldo Campos Nudelmann">
+      <div class="duo__blob" aria-hidden="true"><svg viewBox="30 20 500 500"><use href="#marca"/></svg></div>
+      <img class="duo__p duo__p--v" src="img/vitor.webp" alt="Dr. Vitor Duarte Guimarães, de jaleco e óculos, sorrindo" width="1058" height="1232" fetchpriority="high">
+      <img class="duo__p duo__p--g" src="img/geraldo.webp" alt="Dr. Geraldo Campos Nudelmann, de jaleco e braços cruzados" width="940" height="1235" fetchpriority="high">
+      <figcaption class="duo__tag duo__tag--v"><b>Dr. Vitor Duarte Guimarães</b><span>Medicina de família</span></figcaption>
+      <figcaption class="duo__tag duo__tag--g"><b>Dr. Geraldo Campos Nudelmann</b><span>Atenção primária</span></figcaption>
     </figure>
+
+    <form class="agenda" id="agenda" novalidate aria-labelledby="agenda-t">
+      <div class="agenda__cab">
+        <p class="agenda__t" id="agenda-t">Agende em menos de um minuto</p>
+        <p class="agenda__s">A equipe confirma o horário pelo WhatsApp.</p>
+      </div>
+      <fieldset class="seg" aria-label="Modalidade">
+        <label><input type="radio" name="mod" value="Presencial no Batel" checked><span><b>Presencial</b><small>R$ 220</small></span></label>
+        <label><input type="radio" name="mod" value="Teleconsulta"><span><b>Por vídeo</b><small>R$ 150</small></span></label>
+      </fieldset>
+      <fieldset class="chips">
+        <legend>O que te traz?</legend>
+        <label><input type="radio" name="motivo" value="Check-up"><span>Check-up</span></label>
+        <label><input type="radio" name="motivo" value="Doença crônica"><span>Doença crônica</span></label>
+        <label><input type="radio" name="motivo" value="Peso e metabolismo"><span>Peso e metabolismo</span></label>
+        <label><input type="radio" name="motivo" value="Saúde mental e sono"><span>Saúde mental</span></label>
+        <label><input type="radio" name="motivo" value="Longevidade"><span>Longevidade</span></label>
+        <label><input type="radio" name="motivo" value="Outro motivo"><span>Outro</span></label>
+      </fieldset>
+      <div class="agenda__linha">
+        <label class="campo"><span>Seu nome</span><input name="nome" autocomplete="name" required placeholder="Como podemos te chamar"></label>
+        <label class="campo"><span>Período</span>
+          <select name="periodo"><option>Qualquer</option><option>Manhã</option><option>Tarde</option></select></label>
+      </div>
+      <button class="btn btn--wa" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
+      <p class="agenda__erro" role="alert" hidden>Escolha o motivo e diga seu nome para continuar.</p>
+    </form>
   </div>
 </section>
 
-<!-- MANIFESTO -->
-<section class="manif">
-  <div class="w">
-    <p class="manif__t" data-palavras>Saúde começa quando existe espaço para falar. Aqui, o tempo da consulta é desenhado para que nada importante fique de fora da conversa.</p>
+<!-- CONVÊNIOS -->
+<section class="conv" aria-label="Redes de desconto aceitas">
+  <p class="conv__t">Aceitamos as redes de desconto</p>
+  <div class="conv__trilho">
+    <div class="conv__faixa">
+      <img src="img/conv-medprev.png" alt="Medprev" width="600" height="285" loading="lazy">
+      <img src="img/conv-sinam.svg" alt="Sinam" width="240" height="132" loading="lazy">
+      <img src="img/conv-solumedi.svg" alt="Solumedi" width="136" height="25" loading="lazy">
+      <img src="img/conv-vidaclass.png" alt="Vida Class" width="240" height="64" loading="lazy">
+      <img src="img/conv-sauprev.png" alt="Sauprev" width="212" height="110" loading="lazy">
+    </div>
+    <div class="conv__faixa" aria-hidden="true">
+      <img src="img/conv-medprev.png" alt="" width="600" height="285" loading="lazy">
+      <img src="img/conv-sinam.svg" alt="" width="240" height="132" loading="lazy">
+      <img src="img/conv-solumedi.svg" alt="" width="136" height="25" loading="lazy">
+      <img src="img/conv-vidaclass.png" alt="" width="240" height="64" loading="lazy">
+      <img src="img/conv-sauprev.png" alt="" width="212" height="110" loading="lazy">
+    </div>
   </div>
 </section>
 
 <!-- CUIDADO -->
 <section class="sec" id="cuidado">
-  <div class="w">
-    <header class="sec__cab">
-      <p class="eyebrow">O que acompanhamos</p>
-      <h2 class="rev">Um clínico de referência para <em>tudo o que é contínuo</em> na sua saúde.</h2>
+  <div class="w cuidado">
+    <header class="cuidado__cab">
+      <p class="eyebrow">O que cuidamos</p>
+      <h2 class="h2 rev">Um só médico para tudo o que é <em>contínuo</em> na sua saúde.</h2>
+      <p class="cuidado__lead rev">Quem acompanha você ao longo do tempo percebe o que um exame isolado não mostra.</p>
     </header>
-    <ol class="cuidados">
-      <li class="cuid rev">
-        <span class="cuid__n">01</span>
-        <div><h3>Consulta clínica e check-up</h3><p>Avaliação completa, revisão de exames e rastreios indicados para a sua idade e o seu histórico.</p></div>
-      </li>
-      <li class="cuid rev">
-        <span class="cuid__n">02</span>
-        <div><h3>Doenças crônicas</h3><p>Pressão, glicose, colesterol e tireoide acompanhados de perto, com ajuste de tratamento ao longo do tempo.</p></div>
-      </li>
-      <li class="cuid rev">
-        <span class="cuid__n">03</span>
-        <div><h3>Plano de acompanhamento da obesidade</h3><p>Saúde metabólica e nutrição tratadas como cuidado médico, com avaliação física e antropométrica.</p></div>
-      </li>
-      <li class="cuid rev">
-        <span class="cuid__n">04</span>
-        <div><h3>Plano de acompanhamento de saúde mental</h3><p>Ansiedade, sono e humor cuidados pela medicina de família, com escuta e continuidade.</p></div>
-      </li>
-      <li class="cuid rev">
-        <span class="cuid__n">05</span>
-        <div><h3>Plano para longevidade</h3><p>Prevenção ativa para envelhecer com autonomia: o que medir, o que mudar e quando reavaliar.</p></div>
-      </li>
-      <li class="cuid rev">
-        <span class="cuid__n">06</span>
-        <div><h3>Lavagem auditiva e atestados de aptidão</h3><p>Procedimentos do dia a dia e atestados para academia, trabalho e atividade física.</p></div>
-      </li>
+    <ol class="lista">
+      <li class="item rev"><button aria-expanded="false"><span class="item__n">01</span><span class="item__t">Check-up e consulta clínica</span><span class="item__mais" aria-hidden="true"></span></button><div class="item__c"><p>Exames lidos em conjunto, com a sua história, e rastreios indicados para a sua idade. Você sai sabendo o que fazer agora e o que pode esperar.</p></div></li>
+      <li class="item rev"><button aria-expanded="false"><span class="item__n">02</span><span class="item__t">Doenças crônicas</span><span class="item__mais" aria-hidden="true"></span></button><div class="item__c"><p>Pressão, glicose, colesterol e tireoide acompanhados de perto, com o tratamento ajustado a cada retorno, não a cada crise.</p></div></li>
+      <li class="item rev"><button aria-expanded="false"><span class="item__n">03</span><span class="item__t">Obesidade e saúde metabólica</span><span class="item__mais" aria-hidden="true"></span></button><div class="item__c"><p>Plano de acompanhamento com avaliação física e antropométrica. Metas que cabem na sua rotina, revistas com você.</p></div></li>
+      <li class="item rev"><button aria-expanded="false"><span class="item__n">04</span><span class="item__t">Saúde mental e sono</span><span class="item__mais" aria-hidden="true"></span></button><div class="item__c"><p>Ansiedade, humor e noites mal dormidas tratados pela medicina de família: escuta, continuidade e encaminhamento quando for preciso.</p></div></li>
+      <li class="item rev"><button aria-expanded="false"><span class="item__n">05</span><span class="item__t">Longevidade</span><span class="item__mais" aria-hidden="true"></span></button><div class="item__c"><p>Prevenção ativa para envelhecer com autonomia: o que medir, o que mudar e quando reavaliar.</p></div></li>
+      <li class="item rev"><button aria-expanded="false"><span class="item__n">06</span><span class="item__t">Lavagem auditiva e atestados</span><span class="item__mais" aria-hidden="true"></span></button><div class="item__c"><p>Lavagem de ouvido e atestados de aptidão para academia, esporte e trabalho, resolvidos na mesma visita.</p></div></li>
     </ol>
   </div>
 </section>
 
-<!-- MÉDICOS -->
-<section class="sec sec--tinta" id="medicos">
-  <div class="w">
-    <header class="sec__cab">
-      <p class="eyebrow">Quem atende</p>
-      <h2 class="rev">Dois clínicos gerais. <em>O mesmo jeito de cuidar.</em></h2>
-    </header>
-    <div class="medicos">
-      <article class="med rev">
-        <div class="med__ini" aria-hidden="true">VG</div>
-        <h3>Dr. Vitor Duarte Guimarães</h3>
-        <p class="med__esp">Clínico geral · Medicina de família</p>
-        <blockquote>“Melhor atendimento médico que já tive na vida.”<cite>Cintia, paciente, out/2026</cite></blockquote>
-      </article>
-      <article class="med rev">
-        <div class="med__ini" aria-hidden="true">GN</div>
-        <h3>Dr. Geraldo Campos Nudelmann</h3>
-        <p class="med__esp">Clínico geral · Medicina de família</p>
-        <blockquote>“Fui muito bem atendida, com muito respeito e atenção.”<cite>S. K., paciente, out/2026</cite></blockquote>
-      </article>
+<!-- CONSULTA -->
+<section class="sec sec--tinta" id="consulta">
+  <div class="w consulta">
+    <div class="relogio" aria-label="Como são usados os 45 minutos da consulta">
+      <svg viewBox="0 0 400 400" aria-hidden="true">
+        <defs><linearGradient id="arco" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b95d6"/><stop offset="1" stop-color="#7cc3a1"/></linearGradient></defs>
+        <g class="relogio__marcas"></g>
+        <circle class="relogio__arco" cx="200" cy="200" r="150" pathLength="60" transform="rotate(-90 200 200)"/>
+      </svg>
+      <div class="relogio__c"><b data-min>0</b><span>minutos</span></div>
     </div>
-    <p class="nota-fonte">Depoimentos publicados na Doctoralia, onde a clínica soma 512 avaliações com nota 5.</p>
+    <div class="consulta__txt">
+      <p class="eyebrow">A consulta</p>
+      <h2 class="h2 rev">Quarenta e cinco minutos, <em>sem pressa de terminar</em>.</h2>
+      <ol class="passos">
+        <li class="rev"><b>Ouvir</b><span>Sua história, seus hábitos, o que preocupa de verdade.</span></li>
+        <li class="rev"><b>Examinar</b><span>Exame físico completo e leitura dos seus exames.</span></li>
+        <li class="rev"><b>Decidir junto</b><span>Um plano claro, com prioridades e próximos passos.</span></li>
+        <li class="rev"><b>Voltar</b><span>O retorno para ver resultados já está no valor.</span></li>
+      </ol>
+      <dl class="fatos rev">
+        <div><dt>Presencial</dt><dd>R$ 220</dd></div>
+        <div><dt>Por vídeo</dt><dd>R$ 150</dd></div>
+        <div><dt>Idiomas</dt><dd>PT · EN · ES</dd></div>
+      </dl>
+      <p class="consulta__nota rev">Chegue 15 minutos antes; a tolerância é de 10. Aceitamos Pix, cartão, transferência e dinheiro.</p>
+    </div>
   </div>
 </section>
 
-<!-- CONSULTA / VALORES -->
-<section class="sec" id="consulta">
-  <div class="w consulta">
-    <div>
-      <p class="eyebrow">Sua consulta</p>
-      <h2 class="rev">Valor claro, <em>retorno incluso</em>.</h2>
-      <p class="consulta__lead rev">Você sabe quanto vai pagar antes de chegar. Em ambas as modalidades, o retorno para mostrar exames já está no valor.</p>
-      <div class="precos">
-        <div class="preco rev">
-          <p class="preco__t">Presencial · Batel</p>
-          <p class="preco__v"><small>R$</small>220</p>
-          <p class="preco__d">45 minutos + 1 retorno</p>
-          <a class="btn btn--p btn--sm" href="https://wa.me/5541998550200" data-wa="Olá! Gostaria de agendar uma consulta presencial no Batel.">Agendar presencial</a>
-        </div>
-        <div class="preco rev">
-          <p class="preco__t">Teleconsulta</p>
-          <p class="preco__v"><small>R$</small>150</p>
-          <p class="preco__d">Por vídeo, de onde você estiver + 1 retorno</p>
-          <a class="btn btn--l btn--sm" href="https://wa.me/5541998550200" data-wa="Olá! Gostaria de agendar uma teleconsulta.">Agendar online</a>
-        </div>
-      </div>
-    </div>
-    <aside class="guia rev">
-      <h3>Antes de vir</h3>
-      <ul>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span>Chegue <b>15 minutos antes</b>. A tolerância de atraso é de 10 minutos.</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span>Traga exames recentes e a lista dos remédios que você usa.</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-card"/></svg><span>Pix, dinheiro, transferência, débito ou crédito.</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg><span>Atendimento em português, inglês e espanhol.</span></li>
-      </ul>
-      <h3 class="guia__h">Redes de desconto aceitas</h3>
-      <p class="convenios"><span>Medprev</span><span>Sinam</span><span>Solumedi</span><span>Vida Class</span><span>Sauprev</span></p>
-    </aside>
+<!-- VOZES -->
+<section class="vozes" aria-label="O que dizem os pacientes">
+  <div class="w vozes__in">
+    <blockquote class="voz rev"><p>“Melhor atendimento médico que já tive na vida.”</p><cite>Cintia · com Dr. Vitor</cite></blockquote>
+    <blockquote class="voz rev"><p>“Fui muito bem atendida, com muito respeito e atenção.”</p><cite>S. K. · com Dr. Geraldo</cite></blockquote>
+    <blockquote class="voz rev"><p>“Muito atencioso e presente.”</p><cite>Pete W. · com Dr. Vitor</cite></blockquote>
   </div>
+  <p class="w vozes__f">Avaliações verificadas na Doctoralia, outubro de 2026.</p>
 </section>
 
 <!-- LOCAL -->
-<section class="sec sec--areia" id="local">
-  <div class="w">
-    <header class="sec__cab">
-      <p class="eyebrow">Como chegar</p>
-      <h2 class="rev">No coração do Batel, <em>em frente ao Shopping Curitiba</em>.</h2>
-    </header>
-    <div class="local">
-      <div class="local__ficha rev">
-        <p class="local__predio">Edifício Bristol Brasil 500</p>
-        <address>Rua Desembargador Motta, 1499<br>1º andar · Sala 106<br>Batel · Curitiba – PR · 80420-164</address>
-        <div class="local__acoes">
-          <a class="btn btn--p" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rua%20Desembargador%20Motta%2C%201499%2C%20Batel%2C%20Curitiba%20PR"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Google Maps</a>
-          <a class="btn btn--l" target="_blank" rel="noopener" href="https://waze.com/ul?ll=-25.44112%2C-49.27838&navigate=yes"><svg class="ico" aria-hidden="true"><use href="#i-waze"/></svg>Waze</a>
-          <button class="btn btn--l" type="button" data-copiar="Rua Desembargador Motta, 1499, 1º andar, sala 106 (Edifício Bristol Brasil 500) – Batel, Curitiba – PR, 80420-164"><svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg><span>Copiar endereço</span></button>
-        </div>
-        <p class="local__dica">Referência: o edifício do hotel Bristol Brasil 500, na calçada oposta ao Shopping Curitiba. Suba ao 1º andar e procure a sala 106.</p>
+<section class="sec" id="local">
+  <div class="w local">
+    <figure class="local__foto">
+      <img src="img/predio.webp" alt="Torre azul do Edifício Bristol Brasil 500, no Batel" width="866" height="1083" loading="lazy">
+      <figcaption>Edifício Bristol Brasil 500</figcaption>
+    </figure>
+    <div class="local__txt">
+      <p class="eyebrow">Onde estamos</p>
+      <h2 class="h2 rev">Na torre azul do Bristol, <em>em frente ao Shopping Curitiba</em>.</h2>
+      <address class="rev">Rua Desembargador Motta, 1499<br>1º andar, sala 106 · Batel · Curitiba – PR</address>
+      <div class="mapas rev">
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua%20Desembargador%20Motta%2C%201499%2C%20Batel%2C%20Curitiba%20-%20PR" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><path fill="#4285F4" d="M12 2c-2 0-3.8.8-5 2.2l5 5.8 5-5.8C15.8 2.8 14 2 12 2z"/><path fill="#EA4335" d="M7 4.2C5.8 5.4 5 7.1 5 9c0 1.3.4 2.7 1 4.1L12 10z"/><path fill="#FBBC04" d="M17 4.2 12 10l6 3.1c.6-1.4 1-2.8 1-4.1 0-1.9-.8-3.6-2-4.8z"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>Google Maps</a>
+        <a href="https://waze.com/ul?ll=-25.44112%2C-49.27838&navigate=yes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#33CCFF" stroke="#0f2e34" stroke-width="1.2" d="M12 3.5c-4.7 0-8.3 3.3-8.3 7.6 0 1.2-.6 2.3-1.6 2.9.9 1.4 2.4 2.4 4.1 2.7.6 1.4 1.900 2.3 3.4 2.3h4.9c1.6 0 3-1 3.5-2.4 2.3-1.3 3.9-3.6 3.9-6.3 0-3.6-4.3-6.8-9.9-6.8z"/><circle cx="9.3" cy="10.3" r="1" fill="#0f2e34"/><circle cx="14.4" cy="10.3" r="1" fill="#0f2e34"/><path d="M9 13c1.6 1.6 4.2 1.6 5.8 0" fill="none" stroke="#0f2e34" stroke-width="1.2" stroke-linecap="round"/><circle cx="8.6" cy="19.6" r="1.8" fill="#0f2e34"/><circle cx="15.4" cy="19.6" r="1.8" fill="#0f2e34"/></svg>Waze</a>
+        <a href="https://maps.apple.com/?q=Cl%C3%ADnica%20Campos%20Guimar%C3%A3es&ll=-25.44112,-49.27838&address=Rua%20Desembargador%20Motta%2C%201499%2C%20Curitiba" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.5 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.2.8 1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.5-1-2.5-4.4zM14 5.2c.7-.8 1.2-2 1-3.2-1 .1-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3.1 1.1.1 2.2-.6 2.9-1.4z"/></svg>Mapas</a>
+        <button type="button" data-copiar="Rua Desembargador Motta, 1499, 1º andar, sala 106 (Edifício Bristol Brasil 500) – Batel, Curitiba – PR, 80420-164"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span>Copiar endereço</span></button>
       </div>
-      <div class="local__visoes rev">
-        <div class="abas" role="tablist" aria-label="Visualizar local">
-          <button role="tab" aria-selected="true" aria-controls="v-fachada" id="t-fachada">Fachada do prédio</button>
-          <button role="tab" aria-selected="false" aria-controls="v-mapa" id="t-mapa">Mapa</button>
-        </div>
-        <div class="visao" id="v-fachada" role="tabpanel" aria-labelledby="t-fachada">
-          <iframe title="Vista da rua: fachada do Edifício Bristol Brasil 500" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen data-src="https://maps.google.com/maps?layer=c&cbll=-25.44112,-49.27838&cbp=12,250,0,0,0&output=svembed"></iframe>
-        </div>
-        <div class="visao" id="v-mapa" role="tabpanel" aria-labelledby="t-mapa" hidden>
-          <iframe title="Mapa: Clínica Campos Guimarães no Batel" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src="https://maps.google.com/maps?q=-25.44112,-49.27838&z=17&output=embed"></iframe>
-        </div>
-      </div>
+      <a class="btn btn--p rev" href="#agenda">Agendar minha consulta</a>
     </div>
-  </div>
-</section>
-
-<!-- AGENDAR -->
-<section class="sec sec--tinta" id="agendar">
-  <div class="w agendar">
-    <div>
-      <p class="eyebrow">Agendar</p>
-      <h2>Conte o que te traz. <em>A gente responde no WhatsApp.</em></h2>
-      <p class="agendar__lead">Preencha em 30 segundos. Sua mensagem chega pronta para a equipe da clínica, que confirma o melhor horário com você.</p>
-      <p class="agendar__alt">Prefere agenda online? <a href="https://www.doctoralia.com.br/clinicas/clinica-de-saude-campos-guimaraes" target="_blank" rel="noopener">Veja os horários na Doctoralia</a>.</p>
-    </div>
-    <form class="form" id="form" novalidate>
-      <div class="campo"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
-      <div class="campo"><label for="f-tel">WhatsApp</label><input id="f-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(41) 9 0000-0000" required></div>
-      <fieldset class="campo">
-        <legend>Modalidade</legend>
-        <div class="pilulas">
-          <label><input type="radio" name="mod" value="Presencial no Batel" checked><span>Presencial</span></label>
-          <label><input type="radio" name="mod" value="Teleconsulta"><span>Online</span></label>
-        </div>
-      </fieldset>
-      <div class="campo"><label for="f-mot">Motivo principal</label>
-        <select id="f-mot" name="motivo" required>
-          <option value="">Escolha uma opção</option>
-          <option>Consulta clínica / check-up</option>
-          <option>Acompanhamento de doença crônica</option>
-          <option>Plano de obesidade e saúde metabólica</option>
-          <option>Saúde mental, sono ou ansiedade</option>
-          <option>Plano de longevidade</option>
-          <option>Lavagem auditiva</option>
-          <option>Atestado de aptidão</option>
-          <option>Outro</option>
-        </select></div>
-      <div class="campo"><label for="f-med">Preferência de médico</label>
-        <select id="f-med" name="medico">
-          <option>Sem preferência</option>
-          <option>Dr. Vitor Duarte Guimarães</option>
-          <option>Dr. Geraldo Campos Nudelmann</option>
-        </select></div>
-      <div class="campo"><label for="f-per">Melhor período</label>
-        <select id="f-per" name="periodo">
-          <option>Qualquer horário</option><option>Manhã</option><option>Tarde</option><option>Noite</option>
-        </select></div>
-      <div class="campo campo--full"><label for="f-obs">Algo que o médico precise saber? <small>(opcional)</small></label><textarea id="f-obs" name="obs" rows="3"></textarea></div>
-      <button class="btn btn--claro campo--full" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
-      <p class="form__erro" role="alert" hidden>Preencha nome, WhatsApp e motivo para continuar.</p>
-    </form>
   </div>
 </section>
 </main>
 
 <footer class="rodape">
   <div class="w rodape__in">
-    <div>
-      <img src="img/logo.jpg" alt="Campos Guimarães Clínica de Saúde" width="88" height="88" loading="lazy">
+    <div class="rodape__marca">
+      <svg class="marca__s" aria-hidden="true"><use href="#marca"/></svg>
+      <p class="marca__t">Campos Guimarães<small>Clínica de Saúde</small></p>
     </div>
-    <div class="rodape__col">
-      <p><b>Clínica de Saúde Campos Guimarães</b><br>Rua Desembargador Motta, 1499, sala 106<br>Batel · Curitiba – PR</p>
-      <p><a href="https://wa.me/5541998550200" data-wa="Olá! Vim pelo site da clínica.">(41) 99855-0200</a> · <a href="https://www.instagram.com/camposguimaraes.clinica/" target="_blank" rel="noopener">@camposguimaraes.clinica</a></p>
+    <div class="rodape__end">
+      <p class="rodape__k">Endereço</p>
+      <p>Rua Desembargador Motta, 1499, sala 106<br>Batel · Curitiba – PR</p>
     </div>
-    <div class="rodape__col rodape__fim">
-      <p>CNPJ 59.753.315/0001-52<br>© 2026 Campos Guimarães</p>
-      <a class="vx-assinatura" href="https://verticci.com/experiencias-digitais" target="_blank" rel="noopener noreferrer" aria-label="Site desenvolvido pela Verticci (abre em nova aba)"><span class="vx-assinatura__txt">Site desenvolvido por</span><svg class="vx-assinatura__v" viewBox="251.58 205.56 285.25 264.55" aria-hidden="true" focusable="false" fill="currentColor"><path d="M381.79 470.11C379.77 466.71 378.09 464.01 376.52 461.25C364.72 440.38 352.93 419.51 341.15 398.63C333.22 384.57 325.390 370.45 317.4 356.43C307.43 338.93 297.27 321.54 287.32 304.03C276.03 284.16 264.88 264.2 253.67 244.28C253.28 243.59 252.96 242.85 252.54 242.17C251.62 240.7 251.58 239.23 252.22 237.61C253.83 233.6 255.28 229.54 256.88 225.53C258.95 220.33 261.09 215.16 263.21 209.99C263.57 209.11 264.01 208.27 264.36 207.53C266.14 207.09 266.42 208.42 266.92 209.31C271.62 217.67 276.27 226.06 280.97 234.42C288.64 248.07 296.34 261.71 304.04 275.35C314.48 293.87 324.89 312.4 335.39 330.89C347.23 351.73 359.2 372.5 371 393.37C379.58 408.53 387.92 423.83 396.48 438.99C397.83 441.38 397.89 443.28 396.48 445.63C392.28 452.61 388.28 459.72 384.17 466.750C383.62 467.69 382.92 468.54 381.79 470.11ZM535.02 304.78C534.86 305.58 534.89 306.1 534.66 306.46C529.51 314.54 524.34 322.6 519.11 330.78C517.22 330.82 515.48 330.9 513.73 330.9C500.78 330.9 487.83 330.91 474.88 330.86C467.78 330.83 462.27 333.9 457.9 339.26C457 340.37 456.31 341.65 455.6 342.9C449.77 353.19 444.03 363.54 438.12 373.78C429.42 388.88 420.6 403.9 411.84 418.96C409.51 422.97 407.25 427.02 404.92 431.03C404.07 432.5 403.19 433.98 401.72 435.51C396.14 426.44 391.27 417.52 386.52 408.46C388.17 405.58 389.64 402.94 391.18 400.34C398.34 388.23 405.59 376.18 412.67 364.03C419.59 352.15 426.35 340.18 433.17 328.25C435.63 323.95 438.14 319.71 441.68 316.13C448.29 309.48 456.41 306.15 465.49 304.8C467.38 304.52 469.31 304.36 471.23 304.36C490.89 304.36 510.56 304.39 530.23 304.45C531.78 304.45 533.34 304.66 535.02 304.78ZM536.73 248.81C536.5 257.59 533.61 265.450 528.03 272.17C521.68 279.82 513.6 284.75 503.6 286.03C491.78 287.55 481.29 284.23 472.68 276.14C461.66 265.79 458.41 252.77 462.29 238.39C466.03 224.55 475.2 215.42 489.09 211.49C510.09 205.56 529.23 218.88 534.63 236.55C535.85 240.54 536.83 244.58 536.73 248.81Z"/></svg><span class="vx-assinatura__marca">Verticci</span></a>
+    <div class="rodape__fale">
+      <p class="rodape__k">Fale com a gente</p>
+      <p class="rodape__soc">
+        <a href="https://www.instagram.com/camposguimaraes.clinica/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a>
+        <a href="https://wa.me/5541998550200" data-wa="Olá! Vim pelo site da Clínica Campos Guimarães."><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+      </p>
     </div>
+  </div>
+  <div class="w rodape__base">
+    <p>© 2026 Clínica de Saúde Campos Guimarães · CNPJ 59.753.315/0001-52</p>
+    <a class="vx-assinatura" href="https://verticci.com/experiencias-digitais" target="_blank" rel="noopener noreferrer" aria-label="Site desenvolvido pela Verticci (abre em nova aba)"><span class="vx-assinatura__txt">Site desenvolvido por</span><svg class="vx-assinatura__v" viewBox="251.58 205.56 285.25 264.55" aria-hidden="true" focusable="false" fill="currentColor"><path d="M381.79 470.11C379.77 466.71 378.09 464.01 376.52 461.25C364.72 440.38 352.93 419.51 341.15 398.63C333.22 384.57 325.39 370.45 317.4 356.43C307.43 338.93 297.27 321.54 287.32 304.03C276.03 284.16 264.88 264.2 253.67 244.28C253.28 243.59 252.96 242.85 252.54 242.17C251.62 240.7 251.58 239.23 252.22 237.61C253.83 233.6 255.28 229.54 256.88 225.53C258.95 220.33 261.09 215.16 263.21 209.99C263.57 209.11 264.01 208.27 264.36 207.53C266.14 207.09 266.42 208.42 266.92 209.31C271.62 217.67 276.27 226.06 280.97 234.42C288.64 248.07 296.34 261.71 304.04 275.35C314.48 293.87 324.89 312.4 335.39 330.89C347.23 351.73 359.2 372.5 371 393.37C379.58 408.53 387.92 423.83 396.48 438.99C397.83 441.38 397.89 443.28 396.48 445.63C392.28 452.61 388.28 459.72 384.17 466.75C383.62 467.69 382.92 468.54 381.79 470.11ZM535.02 304.78C534.86 305.58 534.89 306.1 534.66 306.46C529.51 314.54 524.34 322.6 519.11 330.78C517.22 330.82 515.48 330.9 513.73 330.9C500.78 330.9 487.83 330.91 474.88 330.86C467.78 330.83 462.27 333.9 457.9 339.26C457 340.37 456.31 341.65 455.6 342.9C449.77 353.19 444.03 363.54 438.12 373.78C429.42 388.88 420.6 403.9 411.84 418.96C409.51 422.97 407.25 427.02 404.92 431.03C404.07 432.5 403.19 433.98 401.72 435.51C396.14 426.44 391.27 417.52 386.52 408.46C388.17 405.58 389.64 402.94 391.18 400.34C398.34 388.23 405.59 376.18 412.67 364.03C419.59 352.15 426.35 340.18 433.17 328.25C435.63 323.950 438.14 319.71 441.68 316.13C448.29 309.48 456.41 306.15 465.49 304.8C467.38 304.52 469.31 304.36 471.23 304.36C490.89 304.36 510.56 304.39 530.23 304.45C531.78 304.45 533.34 304.66 535.02 304.78ZM536.73 248.81C536.5 257.59 533.61 265.45 528.03 272.17C521.68 279.82 513.6 284.75 503.6 286.03C491.78 287.55 481.29 284.23 472.68 276.14C461.66 265.79 458.41 252.77 462.29 238.39C466.03 224.55 475.2 215.42 489.09 211.49C510.09 205.56 529.23 218.88 534.63 236.55C535.85 240.54 536.83 244.58 536.73 248.81Z"/></svg><span class="vx-assinatura__marca">Verticci</span></a>
   </div>
 </footer>
 
-<a class="wa-flut" href="https://wa.me/5541998550200" data-wa="Olá! Vim pelo site e gostaria de agendar uma consulta na Clínica Campos Guimarães." aria-label="Agendar pelo WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></a>
+<a class="wa-flut" href="https://wa.me/5541998550200" data-wa="Olá! Vim pelo site e gostaria de agendar uma consulta na Clínica Campos Guimarães." aria-label="Agendar pelo WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
 <div class="toast" role="status" aria-live="polite"></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.770-1.66-2.07-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.8h-.01a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
-  <symbol id="i-waze" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M19.5 9.5a7.5 7.5 0 0 0-15 0c0 2-1 3.2-2 3.8.6 1.6 2 2.5 3.6 2.7A7.5 7.5 0 0 0 12 18.5h1.5a7.5 7.5 0 0 0 6-9z"/><circle cx="8" cy="19.5" r="1.6" fill="currentColor"/><circle cx="16" cy="19.5" r="1.6" fill="currentColor"/><circle cx="10" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="9" r=".9" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M9.5 12.5c1.4 1.3 3.6 1.3 5 0"/></symbol>
-  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 7v5l3 2"/></symbol>
-  <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></symbol>
-  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 10h18M7 15h4"/></symbol>
-  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+  <defs>
+    <linearGradient id="mA" x1="0" y1="0" x2="1" y2=".6"><stop offset="0" stop-color="#3b95d6"/><stop offset=".55" stop-color="#7cbcd2"/><stop offset="1" stop-color="#a8d4c8"/></linearGradient>
+    <linearGradient id="mB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9bcdb8"/><stop offset=".5" stop-color="#6aa985"/><stop offset="1" stop-color="#4d9168"/></linearGradient>
+  </defs>
+  <symbol id="marca" viewBox="30 20 500 500"><path fill="url(#mA)" d="M60 120C90 40 220 10 300 70c40 30 70 60 120 70 70 10 100 90 70 140-30 40-90 50-130 70-30 20-40 70-40 90-10 60-70 80-120 65-60-20-80-85-50-135 20-35 50-60 60-70-50 5-120-10-150-60-20-35-15-80 0-120z"/><path fill="url(#mB)" opacity=".92" d="M205 305 420 140c70 10 100 90 70 140-30 40-90 50-130 70-30 20-40 70-40 90-10 60-70 80-120 65-60-20-80-85-50-135 15-25 35-50 55-65z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.8h-.01a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.950L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
 </svg>
 <script src="js/main.js" defer></script>
 </body>
